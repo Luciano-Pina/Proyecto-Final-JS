@@ -34,7 +34,7 @@ function newRacquet() {
     let name = prompt("Name and model of racquet?").toUpperCase()
     let price = parseInt (prompt("What will be the sale price?"))
     let units = prompt("How many have you got in stock?")
-        racquets.push(new Racquets(id, name, price, units))
+        racquets.push(new Racquet(id, name, price, units))
 
         console.table(racquets)
 }
@@ -63,3 +63,8 @@ function filterProduct() {
 //     const searchResult = racquets.find (Racquet => Racquet.name == find)
 //         console.table(searchResult)
 // }
+
+generateProduct()
+newRacquet()
+navigateArray()
+filterProduct()
