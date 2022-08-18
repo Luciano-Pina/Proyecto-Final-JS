@@ -32,7 +32,7 @@ function dontSell() {
 function newRacquet() {
     let id = generateID()
     let name = prompt("Name and model of racquet?").toUpperCase()
-    let price = parseInt (prompt("What will be the sale price?"))
+    let price = parseInt(prompt("What will be the sale price?"))
     let units = prompt("How many have you got in stock?")
         racquets.push(new Racquet(id, name, price, units))
 
@@ -40,10 +40,14 @@ function newRacquet() {
 }
 
 function generateProduct() {
-    racquets.push( new Racquet(generateID(), "head speed pro".toUpperCase(), 200, 10))
-    racquets.push( new Racquet(generateID(), "babolat pure aero".toUpperCase(), 210, 5))
-    racquets.push( new Racquet(generateID(), "wilson pro staff rf97".toUpperCase(), 270, 7))
-    racquets.push( new Racquet(generateID(), "yonex ezone 98".toUpperCase(), 200, 15))
+    racquets.push( new Racquet(generateID(), "head speed pro".toUpperCase(), 200, 100))
+    racquets.push( new Racquet(generateID(), "babolat pure aero".toUpperCase(), 210, 50))
+    racquets.push( new Racquet(generateID(), "wilson pro staff rf97".toUpperCase(), 270, 70))
+    racquets.push( new Racquet(generateID(), "yonex ezone 98".toUpperCase(), 200, 45))
+    racquets.push( new Racquet(generateID(), "yonex ezone 98".toUpperCase(), 200, 55))
+    racquets.push( new Racquet(generateID(), "volkl v8 pro".toUpperCase(), 150, 100))
+    racquets.push( new Racquet(generateID(), "head extreme pro".toUpperCase(), 150, 75))
+    racquets.push( new Racquet(generateID(), "head radical pro".toUpperCase(), 120, 100))   
 }
 
 // generateProduct() ------------> si invoco la funcion, refresco y me aparece error en la consola!
@@ -57,14 +61,26 @@ function filterProduct() {
         console.table(result)
 }
 
-// ---------------------
-// function findProduct() {
-//     let find = prompt("Search for a product..")
-//     const searchResult = racquets.find (Racquet => Racquet.name == find)
-//         console.table(searchResult)
-// }
-
 generateProduct()
-newRacquet()
+// newRacquet()
 navigateArray()
 filterProduct()
+
+
+
+// Para el evento de la SEARCHBAR ----------------
+
+
+const searchBar = document.querySelector("input");
+
+// para cuando cree la pagina de resultado de busqueda
+const searchBtn = document.querySelector("button");
+  
+
+searchBar.addEventListener("keyup",(i)=>{
+    const searchInput = i.target.value;
+    const searchResults = racquets.filter (Racquet => {
+       return Racquet.name.includes(searchInput)
+  })
+  console.log(searchResults)
+})
