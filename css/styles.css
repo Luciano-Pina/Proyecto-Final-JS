@@ -1,9 +1,11 @@
 @import 'nav.css';
+@import 'footer.css';
 
 .highlight-section{
     width: 100%;
     height: calc(100vh - 120px);
     background-image: url('../images/ball-wallp.webp');
+    opacity: 0.9;
     background-size: cover;
     display: flex;
     justify-content: center;
