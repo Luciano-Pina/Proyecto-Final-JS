@@ -245,16 +245,15 @@ function setItems(allProduct) {
         cartItems = {allProduct}      
     }
     
-
-    localStorage.setItem("productInCart", JSON.stringify(allProduct))       
+    cartArray.push(allProduct)
+    localStorage.setItem("productInCart", JSON.stringify(cartArray))       
 }
 
-// ACA ARRIBA INTENTO DE QUE NO ME SOBRE-ESCRIBA EN LOCAL.STORAGE PERO NO LO LOGRO!--------------------------//
+// ---------------------------SUMA DEL COSTO TOTAL DEL CARRITO-----------------------------
 
 
 function totalCostCart(product) {
-    let cartCost = localStorage.getItem("totalCostCart");
-    
+    let cartCost = localStorage.getItem("totalCostCart");    
 
 
     if(cartCost != null){
