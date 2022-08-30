@@ -175,3 +175,48 @@
 .pre-btn:hover img, .nxt-btn:hover img{
     opacity: 1;
 }
+
+/* --------------------------------------------------------------------- */
+/* -------------------------------CART PAGE---------------------------- */
+
+.cart-container {
+    max-width: 100%;
+    /* justify-content: space-around; */
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.product-header {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 5px solid #383838;
+    margin: 0 auto;
+}
+
+.product-title {
+    width: 45%;
+}
+
+.product-price {
+    width: 15%;
+    display: flex;
+    align-items: center;
+    border-bottom: #383838;
+}
+
+.product-quantity {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    border-bottom: #383838;
+}
+
+.product-total {
+    width: 10%;
+    display: flex;
+    align-items: center;
+    border-bottom: #383838;
+}

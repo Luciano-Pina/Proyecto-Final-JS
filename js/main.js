@@ -2,12 +2,13 @@ const searchBar = document.querySelector("input");
 
 // -------------------------------Pelotas------------------------------------------------------------//
 class Ball {
-    constructor(id, name, price, units){
+    constructor(id, name, price, units, img){
         this.id = id;
         this.name = name;
         this.price = price;
         this.units = units;        
         this.inStock = true;
+        this.img = img;
     }
     priceTax () {
         let priceTax = this.price * tax
@@ -25,14 +26,14 @@ function newBall() {
 }
 
 function generateProductB() {
-    balls.push (new Ball(generateID(), "Dunlop ATP".toUpperCase(), 6, 300))
-    balls.push (new Ball(generateID(), "Dunlop ATP Championship".toUpperCase(), 4.5, 250))
-    balls.push (new Ball(generateID(), "Dunlop Australian Open".toUpperCase(), 5, 150))
-    balls.push (new Ball(generateID(), "Dunlop Fort All Court Tournament Select".toUpperCase(), 5.5, 270))
-    balls.push (new Ball(generateID(), "Head Tour XT".toUpperCase(), 5.5, 320))
-    balls.push (new Ball(generateID(), "Slazenger Wimbledon".toUpperCase(), 5.5, 350))
-    balls.push (new Ball(generateID(), "Babolat Gold Academy Bucket".toUpperCase(), 95, 100))
-    balls.push (new Ball(generateID(), "Head Coach Bucket".toUpperCase(), 80, 90))
+    balls.push (new Ball(generateID(), "Dunlop ATP".toUpperCase(), 6, 300, 'images/dunlop-atp.webp'))
+    balls.push (new Ball(generateID(), "Dunlop ATP Championship".toUpperCase(), 4.5, 250, 'images/dunlop-atp-championship.webp'))
+    balls.push (new Ball(generateID(), "Dunlop Australian Open".toUpperCase(), 5, 150, 'images/dunlop-ao.webp'))
+    balls.push (new Ball(generateID(), "Dunlop Fort All Court Tournament Select".toUpperCase(), 5.5, 270, 'images/dunlop-all-court.webp'))
+    balls.push (new Ball(generateID(), "Head Tour XT".toUpperCase(), 5.5, 320, 'images/head-tour-xt.webp'))
+    balls.push (new Ball(generateID(), "Slazenger Wimbledon".toUpperCase(), 5.5, 350, 'images/slazenger-wimbledon.webp'))
+    balls.push (new Ball(generateID(), "Babolat Gold Academy Bucket".toUpperCase(), 95, 100, 'images/gold-academy-ball-bucket.webp'))
+    balls.push (new Ball(generateID(), "Head Coach Bucket".toUpperCase(), 80, 90, 'images/head-coach-bucket.jpg'))
 }
 
 function navigateArrayB() {balls.forEach(Element => console.log(Element))}
@@ -50,13 +51,14 @@ searchBar.addEventListener("keyup",(i)=>{
 // -------------------------------------------------------------------------------------------------//
 // -----------------------------Cuerdas------------------------------------------------------------//
 class String {
-    constructor(id, name, price, units, type) {
+    constructor(id, name, price, units, type, img) {
         this.id = id;
         this.name = name;
         this.price = price;
         this.units = units;
         this.type = type;
         this.inStock = true;
+        this.img = img;
     }
         priceTax () {
             let priceTax = this.price * tax
@@ -75,14 +77,14 @@ function newString() {
 }
 
 function generateProductS() {
-    strings.push( new String(generateID(), "luxilon alu power soft 200m".toUpperCase(), 200, 10, "multifilament".toLowerCase()))
-    strings.push( new String(generateID(), "Volkl V-Icon 12m".toUpperCase(), 45, 15, "natural gut".toLowerCase()))
-    strings.push( new String(generateID(), "Head Primal Hybrid 200m".toUpperCase(), 160, 20, "hybrid".toLowerCase()))
-    strings.push( new String(generateID(), "Luxilon Savage 200m".toUpperCase(), 100, 30, "multifilament".toLowerCase()))
-    strings.push( new String(generateID(), "Luxilon Smart 200m".toUpperCase(), 200, 15, "multifilament".toLowerCase()))
-    strings.push( new String(generateID(), "Luxilon 4G Soft 200m".toUpperCase(), 200, 20, "multifilament".toLowerCase()))
-    strings.push( new String(generateID(), "Yonex PolyTour Strike 200m".toUpperCase(), 150, 25, "multifilament".toLowerCase()))
-    strings.push( new String(generateID(), "Babolat RPM Rough 200m".toUpperCase(), 150, 35, "multifilament".toLowerCase()))
+    strings.push( new String(generateID(), "luxilon alu power soft 200m".toUpperCase(), 200, 10, "multifilament".toLowerCase(), 'images/alu-power-soft.webp'))
+    strings.push( new String(generateID(), "Volkl V-Icon 12m".toUpperCase(), 45, 15, "natural gut".toLowerCase(), 'images/volkl-vicon.jpg'))
+    strings.push( new String(generateID(), "Head Primal Hybrid 200m".toUpperCase(), 160, 20, "hybrid".toLowerCase(), 'images/head-primal.jpg'))
+    strings.push( new String(generateID(), "Luxilon Savage 200m".toUpperCase(), 100, 30, "multifilament".toLowerCase(), 'images/luxilon-savage.webp'))
+    strings.push( new String(generateID(), "Luxilon Smart 200m".toUpperCase(), 200, 15, "multifilament".toLowerCase(), 'images/luxilon-smart.webp'))
+    strings.push( new String(generateID(), "Luxilon 4G Soft 200m".toUpperCase(), 200, 20, "multifilament".toLowerCase(), 'images/luxilon-4g.jpg'))
+    strings.push( new String(generateID(), "Yonex PolyTour Strike 200m".toUpperCase(), 150, 25, "multifilament".toLowerCase(), 'images/yonex-polytour.jpg'))
+    strings.push( new String(generateID(), "Babolat RPM Rough 200m".toUpperCase(), 150, 35, "multifilament".toLowerCase(), 'images/babolat-rpm-rough.jpg'))
 }
 
 function navigateArrayS() {strings.forEach(Element => console.log(Element))}
@@ -100,12 +102,13 @@ searchBar.addEventListener("keyup",(i)=>{
 // ------------------------------------------------------------------------------------------------//
 // ------------------------------Raquetas---------------------------------------------------------//
 class Racquet {
-    constructor(id, name, price, units) {
+    constructor(id, name, price, units, img) {
         this.id = id;
         this.name = name;
         this.price = price;
         this.units = units;
         this.inStock = true;
+        this.img = img;
     }
         priceTax () {
             let priceTax = this.price * tax
@@ -141,15 +144,15 @@ function newRacquet() {
 }
 
 function generateProductR() {
-    racquets.push( new Racquet(generateID(), "head speed pro".toUpperCase(), 200, 100))
-    racquets.push( new Racquet(generateID(), "babolat pure aero".toUpperCase(), 210, 50))
-    racquets.push( new Racquet(generateID(), "wilson pro staff rf97".toUpperCase(), 270, 70))
-    racquets.push( new Racquet(generateID(), "yonex ezone 98".toUpperCase(), 200, 45))
-    racquets.push( new Racquet(generateID(), "volkl v8 pro".toUpperCase(), 150, 100))
-    racquets.push( new Racquet(generateID(), "head extreme pro".toUpperCase(), 150, 75))
-    racquets.push( new Racquet(generateID(), "head radical pro".toUpperCase(), 120, 100))
-    racquets.push( new Racquet(generateID(), "babolat pure drive".toUpperCase(), 220, 50))    
-    racquets.push( new Racquet(generateID(), "wilson blade pro".toUpperCase(), 220, 50)) 
+    racquets.push( new Racquet(generateID(), "head speed pro".toUpperCase(), 200, 100, 'images/speed-pro.jpg'))
+    racquets.push( new Racquet(generateID(), "babolat pure aero".toUpperCase(), 210, 50, 'images/pure-aero.jpg'))
+    racquets.push( new Racquet(generateID(), "wilson pro staff rf97".toUpperCase(), 270, 70, 'images/pro-staff.webp'))
+    racquets.push( new Racquet(generateID(), "yonex ezone 98".toUpperCase(), 200, 45, 'images/ezone-98.webp'))
+    racquets.push( new Racquet(generateID(), "volkl v8 pro".toUpperCase(), 150, 100, 'images/volkl-v8.webp'))
+    racquets.push( new Racquet(generateID(), "head extreme pro".toUpperCase(), 150, 75, 'images/extreme-pro.jpg'))
+    racquets.push( new Racquet(generateID(), "head radical pro".toUpperCase(), 120, 100, 'images/radical-pro.jpg'))
+    racquets.push( new Racquet(generateID(), "babolat pure drive".toUpperCase(), 220, 50, 'images/pure-drive.webp'))    
+    racquets.push( new Racquet(generateID(), "wilson blade pro".toUpperCase(), 220, 50, 'images/blade-pro.webp')) 
 }
 
 function navigateArray() {racquets.forEach(Element => console.log(Element))}
@@ -168,6 +171,7 @@ searchBar.addEventListener("keyup",(i)=>{
   console.log(racquetResults)
 })
 
+// -------------------------------SLIDER-----------------------------------------//
 
 const productContainers = [...document.querySelectorAll('.product-container')];
 const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
@@ -185,6 +189,7 @@ productContainers.forEach((item, i) => {
         item.scrollLeft -= containerWidth;
     })
 })
+// -------------------------------------------------------------------------//
 
 generateProductR()
 generateProductS()
