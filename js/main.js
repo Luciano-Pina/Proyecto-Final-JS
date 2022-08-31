@@ -213,9 +213,12 @@ let carts = document.querySelectorAll(".card-btn");
 for (let i=0; i < carts.length; i++ ) {
     carts[i].addEventListener("click", () => {
         cartNumbers(allProducts[i]);
-        totalCostCart(allProducts[i]);
+        addedPopup();
+        totalCostCart(allProducts[i]);            
     })
 }
+
+
 
 function cartNumbers(allProduct) {
     let productNumbers = localStorage.getItem('cartNumbers');
@@ -254,7 +257,7 @@ function setItems(allProduct) {
     localStorage.setItem("productInCart", JSON.stringify(cartArray))       
 }
 
-// ---------------------------SUMA DEL COSTO TOTAL DEL CARRITO-----------------------------
+// ---------------------------SUMA DEL COSTO TOTAL DEL CARRITO-----------------------------//
 
 
 function totalCostCart(product) {
@@ -272,3 +275,20 @@ function totalCostCart(product) {
     
 
 }
+
+// -------------------SWEETALERT POP-UP-----------------//
+
+const addedPopup = () => {
+    const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 1000,
+        timerProgressBar: false,        
+      })      
+      Toast.fire({
+        icon: 'success',
+        title: 'Item added to cart'
+      })
+}
+
