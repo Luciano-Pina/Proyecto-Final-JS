@@ -138,7 +138,7 @@ function newRacquet() {
     let name = prompt("Name and model of racquet?").toUpperCase()
     let price = parseInt(prompt("What will be the sale price?"))
     let units = prompt("How many have you got in stock?")
-        racquets.push(new Racquet(id, name, price, units))
+        racquets.push(new Racquet(id, name, price, units, img))
 
         console.table(racquets)
 }
@@ -152,7 +152,7 @@ function generateProductR() {
     racquets.push( new Racquet(generateID(), "head extreme pro".toUpperCase(), 150, 75, 'images/extreme-pro.jpg'))
     racquets.push( new Racquet(generateID(), "head radical pro".toUpperCase(), 120, 100, 'images/radical-pro.jpg'))
     racquets.push( new Racquet(generateID(), "babolat pure drive".toUpperCase(), 220, 50, 'images/pure-drive.webp'))    
-    racquets.push( new Racquet(generateID(), "wilson blade pro".toUpperCase(), 220, 50, 'images/blade-pro.webp')) 
+    racquets.push( new Racquet(generateID(), "wilson blade pro".toUpperCase(), 220, 80, 'images/blade-pro.webp')) 
 }
 
 function navigateArray() {racquets.forEach(Element => console.log(Element))}
@@ -292,3 +292,14 @@ const addedPopup = () => {
       })
 }
 
+// ----------------------------FETCH()-------------------//
+
+const fetchData = async ()=> {
+    await fetch('js/products.json')
+            .then((response) => response.json())
+            .then((data) => {
+                racquets = data
+                console.log(racquets)
+            })
+            .catch((error) => console.error("Oh no! An error has ocurred"))
+}
