@@ -202,25 +202,34 @@ generateProductB()
 
 // ALGO DE ESTE ARRAY CONCATENADO NO FUNCIONA BIEN PARA STRINGS Y BALLS---------------/
 // ----------------------------------------------------------------------------------/ 
-const allProducts = [...racquets, ...strings, ...balls]
+const allProducts = []
 // --------------------------------------------------------------------------------/
 
 
 
 
+// let carts = document.querySelectorAll(".card-btn");
+
+// for (let i=0; i < carts.length; i++ ) {
+//     carts[i].addEventListener("click", () => {
+//         cartNumbers(allProducts[i]);
+//         addedPopup();
+//         totalCostCart(allProducts[i]);            
+//     })
+// }
 let carts = document.querySelectorAll(".card-btn");
 
-for (let i=0; i < carts.length; i++ ) {
-    carts[i].addEventListener("click", () => {
-        cartNumbers(allProducts[i]);
+for (const btn of carts) {
+     btn.addEventListener("click", () => {
+        cartNumbers(btn.id);
         addedPopup();
-        totalCostCart(allProducts[i]);            
+                   
     })
 }
 
 
 
-function cartNumbers(allProduct) {
+function cartNumbers(id) {
     let productNumbers = localStorage.getItem('cartNumbers');
     productNumbers = parseInt(productNumbers)
 
@@ -230,30 +239,37 @@ function cartNumbers(allProduct) {
         localStorage.setItem("cartNumbers", 1);
     }
 
-    setItems(allProduct);
+    setItems(id);
 }
 
 
-function setItems(allProduct) {
-    allProducts.units = 1
-
-    let cartItems = localStorage.getItem("productInCart");
-    cartItems = JSON.parse(cartItems)
-
-    if(cartItems != null) {
-        if(cartItems[allProduct] == undefined){
-            cartItems ={
-                ...cartItems,
-                [allProduct.name]: allProduct
-            }
-        }
-        cartItems[allProduct] + 1;
-    } else {
-        allProduct.units = 1;
-        cartItems = {allProduct}      
-    }
+function setItems(id) {  
     
-    cartArray.push(allProduct)
+    let products = allProducts.find(item => item.id == id)
+    products.units = 1
+
+    let cartItems = localStorage.getItem("productInCart") || []
+        cartItems = JSON.parse(cartItems)
+        console.log(cartItems);
+        cartArray = [...cartItems]
+        
+    // let cartItems = localStorage.getItem("productInCart");
+    // cartItems = JSON.parse(cartItems)
+
+    // if(cartItems != null) {
+    //     if(cartItems[allProduct] == undefined){
+    //         cartItems ={
+    //             ...cartItems,
+    //             [allProduct.name]: allProduct
+    //         }
+    //     }
+    //     cartItems[allProduct] + 1;
+    // } else {
+    //     allProduct.units = 1;
+    //     cartItems = {allProduct}      
+    // }        
+    cartArray.push(products)
+    console.log(cartArray)
     localStorage.setItem("productInCart", JSON.stringify(cartArray))       
 }
 
@@ -271,8 +287,7 @@ function totalCostCart(product) {
     }else {
         localStorage.setItem("totalCostCart", product.price);
     }
-
-    
+   
 
 }
 
@@ -298,8 +313,10 @@ const fetchData = async ()=> {
     await fetch('js/products.json')
             .then((response) => response.json())
             .then((data) => {
-                racquets = data
-                console.log(racquets)
+                
+                console.log(data)
             })
             .catch((error) => console.error("Oh no! An error has ocurred"))
 }
+
+fetchData()

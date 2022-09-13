@@ -1,160 +1,160 @@
 [
     {
-        "id": "generateID()",
+        "id": 1000,
         "name": "head speed pro",
         "price": "200",
         "units": "100",
         "image": "images/speed-pro.jpg"
     },
     {
-        "id": "generateID()",
+        "id": 1100,
         "name": "babolat pure aero",
         "price": "210",
         "units": "50",
         "image": "images/pure-aero.jpg"
     },
     {
-        "id": "generateID()",
+        "id": 1200,
         "name": "wilson pro staff rf97",
         "price": "270",
         "units": "70",
         "image": "images/pro-staff.webp"
     },{
-        "id": "generateID()",
+        "id": 1300,
         "name": "yonex ezone 98",
         "price": "200",
         "units": "45",
         "image": "images/ezone-98.webp"
     },{
-        "id": "generateID()",
+        "id": 1400,
         "name": "volkl v8 pro",
         "price": "150",
         "units": "100",
         "image": "images/volkl-v8.webp"
     },{
-        "id": "generateID()",
+        "id": 1500,
         "name": "head extreme pro",
         "price": "150",
         "units": "75",
         "image": "images/extreme-pro.jpg"
     },{
-        "id": "generateID()",
+        "id": 1600,
         "name": "head radical pro",
         "price": "120",
         "units": "100",
         "image": "images/radical-pro.jpg"
     },{
-        "id": "generateID()",
+        "id": 1700,
         "name": "babolat pure drive",
         "price": "220",
         "units": "50",
         "image": "images/pure-drive.webp"
     },{
-        "id": "generateID()",
+        "id": 1800,
         "name": "wilson blade pro",
         "price": "220",
         "units": "80",
         "image": "images/blade-pro.webp"
     },{
-        "id": "generateID()",
+        "id": 1900,
         "name": "Dunlop ATP",
         "price": "6",
         "units": "300",
         "image": "images/dunlop-atp.webp"
     },{
-        "id": "generateID()",
+        "id": 2000,
         "name": "Dunlop ATP Championship",
         "price": "4.5",
         "units": "250",
         "image": "images/dunlop-atp-championship.webp"
     },
     {
-        "id": "generateID()",
+        "id": 2100,
         "name": "Dunlop Australian Open",
         "price": "5",
         "units": "150",
         "image": "images/dunlop-ao.webp"
     },{
-        "id": "generateID()",
+        "id": 2200,
         "name": "Dunlop Fort All Court Tournament Select",
         "price": "5.5",
         "units": "270",
         "image": "images/dunlop-all-court.webp"
     },{
-        "id": "generateID()",
+        "id": 2300,
         "name": "Head Tour XT",
         "price": "5.5",
         "units": "320",
         "image": "images/head-tour-xt.webp"
     },{
-        "id": "generateID()",
+        "id": 2400,
         "name": "Slazenger Wimbledon",
         "price": "5.5",
         "units": "350",
         "image": "images/slazenger-wimbledon.webp"
     },{
-        "id": "generateID()",
+        "id": 2500,
         "name": "Babolat Gold Academy Bucket",
         "price": "95",
         "units": "100",
         "image": "images/gold-academy-ball-bucket.webp"
     },{
-        "id": "generateID()",
+        "id": 2600,
         "name": "Head Coach Bucket",
         "price": "80",
         "units": "90",
         "image": "images/head-coach-bucket.jpg"
     },{
-        "id": "generateID()",
+        "id": 2700,
         "name": "luxilon alu power soft 200m",
         "price": "200",
         "units": "10",
         "type":"multifilament",
         "image": "images/alu-power-soft.webp"
     },{
-        "id": "generateID()",
+        "id": 2800,
         "name": "Volkl V-Icon 12m",
         "price": "45",
         "units": "15",
         "type":"natural gut",
         "image": "images/volkl-vicon.jpg"
     },{
-        "id": "generateID()",
+        "id": 2900,
         "name": "Head Primal Hybrid 200m",
         "price": "160",
         "units": "20",
         "type":"hybrid",
         "image": "images/head-primal.jpg"
     },{
-        "id": "generateID()",
+        "id": 3000,
         "name": "Luxilon Savage 200m",
         "price": "100",
         "units": "30",
         "type":"multifilament",
         "image": "images/luxilon-savage.webp"
     },{
-        "id": "generateID()",
+        "id": 3100,
         "name": "Luxilon Smart 200m",
         "price": "200",
         "units": "15",
         "type":"multifilament",
         "image": "images/luxilon-smart.webp"
     },{
-        "id": "generateID()",
+        "id": 3200,
         "name": "Luxilon 4G Soft 200m",
         "price": "200",
         "units": "20",
         "type":"multifilament",
         "image": "images/luxilon-4g.jpg"
     },{
-        "id": "generateID()",
+        "id": 3300,
         "name": "Yonex PolyTour Strike 200m",
         "price": "150",
         "units": "25",
         "type":"multifilament",
         "image": "images/yonex-polytour.jpg"
     },{
-        "id": "generateID()",
+        "id": 3400,
         "name": "Babolat RPM Rough 200m",
         "price": "150",
         "units": "35",
